@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification Component displays a notification 1`] = `
+<div
+  className="notification is-info"
+>
+  <button
+    className="delete"
+    onClick={[Function]}
+  />
+</div>
+`;
