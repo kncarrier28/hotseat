@@ -22,6 +22,15 @@ class Firebase {
     this.auth = app.auth();
     this.db = app.firestore();
   }
+
+  games = () => this.db.collection("/games");
+
+  game = gameId => this.db.doc(`/games/${gameId}`);
+
+  players = gameId => this.db.collection(`/games/${gameId}/players`);
+
+  player = (gameId, playerId) =>
+    this.db.doc(`/games/${gameId}/players/${playerId}`);
 }
 
 export default Firebase;

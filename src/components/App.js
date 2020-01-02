@@ -5,6 +5,8 @@ import * as ROUTES from "../constants/routes";
 
 import { NavMenu } from "./NavMenu";
 import HomePage from "./Home";
+import NewGamePage from "./NewGame";
+import JoinGamePage from "./JoinGame";
 
 class App extends React.Component {
   render() {
@@ -13,6 +15,8 @@ class App extends React.Component {
         <NavMenu />
         <div className="section">
           <Route exact path={ROUTES.LANDING} component={HomePage} />
+          <Route path={ROUTES.NEW_GAME} component={NewGamePage} />
+          <Route path={ROUTES.JOIN_GAME} component={JoinGamePage} />
         </div>
       </Router>
     );

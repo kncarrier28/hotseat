@@ -1,8 +1,6 @@
 import React from "react";
-import { compose } from "recompose";
 import { Link } from "react-router-dom";
 
-import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
 
 export class HomePage extends React.Component {
@@ -47,4 +45,4 @@ export class HomePage extends React.Component {
   }
 }
 
-export default compose(withFirebase)(HomePage);
+export default HomePage;
