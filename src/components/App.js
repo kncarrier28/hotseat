@@ -12,8 +12,7 @@ class App extends React.Component {
       <Router>
         <NavMenu />
         <div className="section">
-          <Route exact path={ROUTES.LANDING} />
-          <Route path={ROUTES.HOME} component={HomePage} />
+          <Route exact path={ROUTES.LANDING} component={HomePage} />
         </div>
       </Router>
     );

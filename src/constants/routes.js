@@ -1,5 +1,4 @@
 export const LANDING = "/";
-export const HOME = "/home";
-export const ACCOUNT = "/account";
-export const ADMIN = "/admin";
 export const GAMES = "/games";
+export const NEW_GAME = "/new-game";
+export const JOIN_GAME = "/join-game";

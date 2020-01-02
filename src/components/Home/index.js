@@ -1,45 +1,48 @@
 import React from "react";
 import { compose } from "recompose";
+import { Link } from "react-router-dom";
 
 import { withFirebase } from "../Firebase";
+import * as ROUTES from "../../constants/routes";
 
 export class HomePage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false
-    };
-  }
-
-  componentDidMount() {
-    // this.setState({ loading: true });
-    // this.unsubscribe = this.props.firebase.charts().onSnapshot(snapshot => {
-    //   let charts = [];
-    //
-    //   snapshot.forEach(doc => {
-    //     charts.push({ ...doc.data(), chartId: doc.id });
-    //   });
-    //
-    //   this.setState({
-    //     charts: charts,
-    //     loading: false
-    //   });
-    // });
-  }
-
-  componentWillUnmount() {
-    // this.unsubscribe();
-  }
-
   render() {
-    const { loading } = this.state;
-
     return (
-      <div>
-        <p className="title">Home</p>
-
-        {loading && <div>Loading...</div>}
-      </div>
+      <>
+        <div className="level">
+          <div className="level-item">
+            <p className="title">Welcome to Hotseat Mobile!</p>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <div className="level">
+              <div className="level-item">
+                <Link
+                  rederAs="button"
+                  className="button is-primary"
+                  to={ROUTES.NEW_GAME}
+                >
+                  Start New Game
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="column">
+            <div className="level">
+              <div className="level-item">
+                <Link
+                  renderAs="button"
+                  className="button is-primary"
+                  to={ROUTES.JOIN_GAME}
+                >
+                  Join Game
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
     );
   }
 }

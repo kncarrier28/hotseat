@@ -27,7 +27,7 @@ export class NavMenu extends React.Component {
         >
           <div className="navbar-brand">
             <Link
-              to={ROUTES.HOME}
+              to={ROUTES.LANDING}
               className="navbar-item is-size-4 has-text-primary"
             >
               Hotseat Mobile
